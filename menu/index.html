@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Frango Assado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Menu Frango Assado</h1>
+        <div class="options">
+            <p class="item-description">Frango Simples - R$10,00</p>
+            <label for="refrigerante">Escolha o refrigerante:</label>
+            <select id="refrigerante" class="select-option">
+                <option value="0">Não obrigado</option>
+                <option value="5">Coca-Cola - R$5,00</option>
+                <option value="5">Pepsi - R$5,00</option>
+                <option value="4">Guaraná - R$4,00</option>
+            </select>
+            <div class="endereco">
+                <input type="text" id="cep" placeholder="CEP" class="input-field">
+                <input type="text" id="endereco" placeholder="Endereço" class="input-field">
+                <input type="text" id="complemento" placeholder="Complemento (opcional)" class="input-field">
+                <input type="text" id="rua" placeholder="Rua" class="input-field">
+                <input type="text" id="numero" placeholder="Número" class="input-field">
+            </div>
+            <label for="formaPagamento">Escolha a forma de pagamento:</label>
+            <div id="formaPagamento" class="payment-methods">
+                <input type="radio" id="cartao" name="formaPagamento" value="Cartão" class="radio-btn">
+                <label for="cartao" class="radio-label">Cartão</label>
+                <input type="radio" id="dinheiro" name="formaPagamento" value="Dinheiro" class="radio-btn">
+                <label for="dinheiro" class="radio-label">Dinheiro</label>
+                <input type="radio" id="pix" name="formaPagamento" value="PIX" class="radio-btn">
+                <label for="pix" class="radio-label">PIX</label>
+            </div>
+            <div id="trocoInput" class="troco-input" style="display: none;">
+                <label for="troco" class="troco-label">Troco para quanto?</label>
+                <input type="text" id="troco" placeholder="Troco para quanto?" class="input-field">
+            </div>
+            <button id="adicionarCarrinho" class="btn-add-cart">Adicionar ao Carrinho</button>
+            <br>
+            <button id="enviarPedido" class="btn-send-order" disabled>Enviar Pedido para WhatsApp</button>
+        </div>
+        <div class="cart">
+            <h2 class="cart-title">Carrinho</h2>
+            <ul id="carrinho" class="cart-items"></ul>
+            <p class="cart-total">Total: R$ <span id="total" class="total-amount">0.00</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
