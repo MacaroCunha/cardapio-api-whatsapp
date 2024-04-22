@@ -1,0 +1,6 @@
+# Ignore arquivos temporários
+*.log
+npm-debug.log*
+
+# Ignore diretório de dependências do Node.js
+node_modules/
