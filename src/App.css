@@ -1,0 +1,165 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.menu-container {
+  max-width: 400px;
+  margin: 50px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.options {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.select-option,
+.input-field {
+  width: calc(100% - 24px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+
+.btn-add-cart,
+.btn-send-order {
+  width: 100%;
+  padding: 12px;
+  background-color: #f79c00; /* mostarda */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 10px; /* Adiciona margem inferior */
+}
+
+.btn-add-cart:hover {
+  background-color: #FFD54F; /* mostarda mais clara ao passar o mouse */
+}
+
+.btn-send-order:hover {
+  background-color: #71FF4D; /* verde mais claro ao passar o mouse */
+}
+
+
+.cart {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.cart-title {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-total {
+  margin-top: 20px;
+  color: #333;
+}
+
+.total-amount {
+  float: right;
+}
+
+.radio-btn {
+  display: none;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  background-color: #fa2525; /* mostarda */
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.radio-label:hover {
+  background-color: #FFB74D; /* mostarda mais clara ao passar o mouse */
+}
+
+.radio-label::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+#cartao:checked + .radio-label::before {
+  background-color: hwb(0 100% 0%); /* Verde para cartão */
+  border: 2px solid #FFA000;
+}
+
+#dinheiro:checked + .radio-label::before {
+  background-color: hsl(34, 100%, 96%); /* Mostarda para dinheiro */
+  border: 2px solid #FFA000;
+}
+
+#pix:checked + .radio-label::before {
+  background-color: #ffffff; /* Azul para PIX */
+  border: 2px solid #FFA000;
+}
+
+.troco-input {
+  display: none;
+}
+
+.troco-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+#troco {
+  border: 2px solid #FFB74D; /* Cor da borda destacada */
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px; /* Adiciona margem inferior */
+  transition: border-color 0.3s ease;
+}
+
+#troco:focus {
+  outline: none;
+  border-color: #FFA000; /* Cor da borda quando em foco */
+}
+
+
+.trocoInput{
+  display: none;
+}

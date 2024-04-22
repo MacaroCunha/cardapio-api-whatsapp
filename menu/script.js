@@ -1,4 +1,4 @@
-var frangoSelecionado = 10; // Frango Simples - R$10,00
+var frangoSelecionado = 10;
 var valorTotal = frangoSelecionado;
 
 function calcularValorTotal(refrigeranteSelecionado) {
@@ -16,14 +16,13 @@ function construirMensagem(formaPagamento, troco) {
     var rua = document.getElementById('rua').value;
     var numero = document.getElementById('numero').value;
     
-    // Constrói a mensagem do pedido
     var mensagem = 'Olá! Gostaria de fazer o seguinte pedido:\n';
     mensagem += '*Pedido:*\n';
     mensagem += '- Frango Simples: R$10,00\n';
     if (!isNaN(refrigeranteSelecionado)) {
         mensagem += '- Refrigerante: R$' + refrigeranteSelecionado.toFixed(2) + '\n';
     }
-    mensagem += '\n'; // Adiciona uma linha em branco entre o pedido e o endereço de entrega
+    mensagem += '\n';
     mensagem += '*Endereço de entrega:*\n';
     mensagem += '- CEP: ' + cep + '\n';
     mensagem += '- Endereço: ' + (endereco ? endereco : '') + '\n';
@@ -43,7 +42,6 @@ document.getElementById('adicionarCarrinho').addEventListener('click', function(
     var total = calcularValorTotal(refrigeranteSelecionado);
     alert('Item adicionado ao carrinho. Total: R$' + total.toFixed(2));
     
-    // Habilita o botão "Enviar Pedido para WhatsApp" quando um item é adicionado ao carrinho
     if (total >= frangoSelecionado) {
         document.getElementById('enviarPedido').disabled = false;
     } else {
@@ -83,7 +81,6 @@ document.getElementById('enviarPedido').addEventListener('click', function() {
         return;
     }
 
-    // Verifica se algum item foi adicionado ao carrinho
     if (valorTotal < frangoSelecionado) {
         alert('O pedido deve ser igual ou superior ao valor do frango (R$10,00).');
         return;
@@ -92,18 +89,12 @@ document.getElementById('enviarPedido').addEventListener('click', function() {
     var mensagem = construirMensagem(formaPagamento, troco);
 
     if (mensagem) {
-        // Constrói o link para o WhatsApp
         var whatsappLink = 'https://wa.me/5511965009866?text=' + encodeURIComponent(mensagem);
 
-        // Redireciona para o WhatsApp
         window.location.href = whatsappLink;
     }
 });
 
-
-
-
-
-
-
-
+document.getElementById('cep').addEventListener('blur', function() {
+    
+});
